@@ -1,7 +1,7 @@
-var TIMEOUT_IN_SECS = 3 * 60
-var ALERT_TIMEOUT_IN_SECS = 30
-var TEMPLATE = '<h1><span class="js-timer-minutes">00</span>:<span class="js-timer-seconds">00</span></h1>'
-var ALERT_MESSAGE = ["Неудача – это просто возможность начать снова, но уже более мудро. © Генри Форд",
+var timeout_in_secs = 3 * 60;
+var alert_timeout_in_secs = 30;
+var template = '<h1><span class="js-timer-minutes">00</span>:<span class="js-timer-seconds">00</span></h1>';
+var alert_message = ["Неудача – это просто возможность начать снова, но уже более мудро. © Генри Форд",
   "Если проблему можно разрешить, не стоит о ней беспокоиться. Если проблема неразрешима, беспокоиться о ней бессмысленно. © Далай Лама",
   "Даже если вы очень талантливы и прилагаете большие усилия, для некоторых результатов просто требуется время: вы не получите ребенка через месяц, даже если заставите забеременеть девять женщин. © Уоррен Баффет",
   "Раз в жизни фортуна стучится в дверь каждого человека, но человек в это время нередко сидит в ближайшей пивной и никакого стука не слышит. © Марк Твен",
@@ -76,7 +76,7 @@ class TimerWidget{
     this.timerContainer = document.createElement('div')
 
     this.timerContainer.setAttribute("style", "height: 70px;top: 10px;left: 10px;position: fixed;z-index: 9999;margin-left: 0px;padding-left: 10px;padding-right: 10px;background-color: #00000060;color: white;text-shadow: 0 0 20px black;")
-    this.timerContainer.innerHTML = TEMPLATE
+    this.timerContainer.innerHTML = template
 
     rootTag.insertBefore(this.timerContainer, rootTag.firstChild)
 
