@@ -109,7 +109,7 @@ function alertMessage() {
 
 function main(){
 
-  var timer = new Timer(TIMEOUT_IN_SECS)
+  var timer = new Timer(timeout_in_secs)
   var timerWiget = new TimerWidget()
   var intervalId = null
 
@@ -120,7 +120,7 @@ function main(){
     timerWiget.update(secsLeft)
     if (secsLeft <= 0) {
         alertMessage()
-        timer.setSecsLeft(ALERT_TIMEOUT_IN_SECS)
+        timer.setSecsLeft(alert_timeout_in_secs)
     }
   }
 
