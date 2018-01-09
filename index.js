@@ -103,7 +103,7 @@ function randomNumberFromInterval(min, max) {
 }
 
 function alertMessage() {
-  var randomMessage = ALERT_MESSAGE[randomNumberFromInterval(0, ALERT_MESSAGE.length)]
+  var randomMessage = alert_message[randomNumberFromInterval(0, alert_message.length)]
   alert(randomMessage)
 }
 
